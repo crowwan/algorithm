@@ -1,10 +1,10 @@
 function solution(s) {
-    let cnt = 0;
-    let zeroCnt = 0;
+    const res = [0,0];
     while(s !== '1'){
-        cnt++;
-        zeroCnt += [...s].filter(a => a === '0').length;
-        s = [...s].filter(a => a !== '0').length.toString(2);
+        const len = [...s].filter(a => a !== '0').length;
+        res[1] += s.length - len;
+        res[0]++;
+        s = len.toString(2);
     }
-    return [cnt,zeroCnt];
+    return res;
 }
