@@ -1,2 +1,3 @@
-a = input()
-print(float(a[0])/float(a[2]))
+[a, b] = input().split(' ')
+
+print(int(a) / int(b))
